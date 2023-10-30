@@ -229,6 +229,7 @@ svg {
 
 .product-actions.product-actions .btn:not(.btn.btn-dark) {
   --bs-btn-border-color: var(--bs-black);
+  color: var(--bs-black);
 
   &:hover,
   &:focus {
