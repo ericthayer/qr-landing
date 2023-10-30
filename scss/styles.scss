@@ -83,7 +83,7 @@ svg {
 }
 
 .material-symbols-outlined {
-  transition: color 0.15s ease;
+  transition: color 0.15s ease-in-out;
 }
 
 .btn.btn {
@@ -95,7 +95,15 @@ svg {
 }
 
 .btn-dark.btn-dark {
-  background: var(--bs-black);
+  background-color: var(--bs-black);
+  border-color: var(--bs-black);
+
+  &:hover,
+  &:focus {
+    background: var(--bs-light);
+    border-color: 1px solid var(--bs-gray-500);
+    color: var(--bs-black);
+  }
 }
 
 .btn-toggle.btn-toggle {
@@ -219,12 +227,12 @@ svg {
   max-width: 32ch;
 }
 
-.product-actions.product-actions .btn {
+.product-actions.product-actions .btn:not(.btn.btn-dark) {
   --bs-btn-border-color: var(--bs-black);
 
   &:hover,
   &:focus {
-    background: var(--bs-black);
+    background-color: var(--bs-black);
     border-color: var(--bs-black);
     color: var(--bs-white);
 
@@ -304,11 +312,11 @@ svg {
 
 //  Media Queries
 
-@media (width > 360px) {
-  .main-menu {
-    border-radius: 2.5rem 0 0 0;
-  }
-}
+// @media (width > 360px) {
+//   .main-menu {
+//     border-radius: 2.5rem 0 0 0;
+//   }
+// }
 
 @media (width > 700px) {
   .app-wrap {
