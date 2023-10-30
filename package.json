@@ -1,9 +1,9 @@
 {
-  "name": "sass-js",
-  "description": "Include Bootstrap's source Sass and compiled JavaScript bundle via npm.",
-  "version": "0.0.0",
-  "private": true,
-  "repository": "twbs/examples",
+  "name": "onsite-support-qr-landing-template",
+  "description": "QR landing page created with Bootstrap 5.3",
+  "version": "1.0.0",
+  "private": false,
+  "repository": "https://github.com/ericthayer/qr-landing.git",
   "license": "MIT",
   "stackblitz": {
     "startCommand": "npm start"
