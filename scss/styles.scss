@@ -265,15 +265,15 @@ svg {
   --bs-offcanvas-height: 65vh;
 }
 
-// [style*="hidden"]:not(.resizerFullScreen) .all {
-//   -webkit-filter: blur(2px);
-//   filter: blur(2px);
-// }
+[style*="hidden"]:not(.resizerFullScreen) .app-main {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
 
-// [style*="hidden"]:not(.resizerFullScreen) #main {
-//   -webkit-filter: none;
-//   filter: none;
-// }
+[style*="hidden"]:not(.resizerFullScreen) #main {
+  -webkit-filter: none;
+  filter: none;
+}
 
 // Collapse
 
