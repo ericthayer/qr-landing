@@ -1,31 +1,5 @@
-// Override Bootstrap's Sass default variables
-//
-// Nearly all variables in Bootstrap are written with the `!default` flag.
-// This allows you to override the default values of those variables before
-// you import Bootstrap's source Sass files.
-//
-// Overriding the default variable values is the best way to customize your
-// CSS without writing _new_ styles. For example, you can either change
-// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
-// `body { color: red; }`.
-
-
-//
-// Bring in Bootstrap
-//
-
-// Option 1
-//
-// Import all of Bootstrap's CSS
-
-// @import "bootstrap/scss/bootstrap";
-
-// Option 2
-//
-// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
-
 // Toggle global options
-$enable-gradients: true;
+$enable-gradients: false;
 $enable-shadows: true;
 
 $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
@@ -85,14 +59,6 @@ $success: #7952b3;
 @import "bootstrap/scss/utilities/api";
 
 
-//
-// Custom styles
-//
-
-#top_navigation {
-  display: none;
-}
-
 // Dark Theme
 
 [data-bs-theme=dark][data-bs-theme=dark] {
@@ -101,7 +67,7 @@ $success: #7952b3;
 
 // reset
 
-:where(html), 
+:where(html),
 :where(body) {
   height: 100svh;
 }
@@ -128,7 +94,7 @@ svg {
 }
 
 .btn-dark.btn-dark {
- background: var(--bs-black);
+  background: var(--bs-black);
 }
 
 .btn-toggle.btn-toggle {
@@ -149,17 +115,17 @@ svg {
   border: 1px solid var(--bs-gray-800);
   background-image: none;
   width: 48px;
-  
-  > span {
+
+  >span {
     color: var(--bs-light);
   }
-  
+
   &:hover,
   &:focus {
     background: var(--bs-body-bg);
     color: var(--bg-light);
 
-    > span {
+    >span {
       color: var(--bs-gray-100);
       // transition: color 0.3s ease;
     }
@@ -181,6 +147,7 @@ svg {
 .app-wrap {
   background: var(--bs-gray-700);
   container: inline-size;
+  height: 100svh;
 }
 
 .app {
@@ -206,24 +173,24 @@ svg {
   background: var(--bs-gray-100);
   grid-template-rows: 1fr auto;
   grid-template-areas: "media"
-  "info";
+    "info";
 }
 
 .product-media {
   grid-area: media;
   position: relative;
   overflow: hidden;
-  
-  & > iframe {
+
+  &>iframe {
     height: 100svh;
     width: 100%;
     // we should not need to block events
     // when we embed our own video
-    pointer-events: none; 
+    pointer-events: none;
   }
 
   &:before {
-    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 90%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 90%);
     content: "";
     position: absolute;
     height: 70svh;
@@ -259,10 +226,11 @@ svg {
 // header
 
 .navbar-brand {
-  > img,
-    svg {
-      height: 5svh;
-      max-width: 13.5rem;
+
+  >img,
+  svg {
+    height: 5svh;
+    max-width: 13.5rem;
   }
 }
 
@@ -275,7 +243,7 @@ svg {
 
 .nav-link.nav-link {
   color: currentColor;
-  
+
   &:hover,
   &:focus {
     background: var(--bs-black);
@@ -315,12 +283,13 @@ svg {
   .main-menu {
     border-radius: 2.5rem 0 0 0;
   }
-} 
+}
 
-@media (width > 768px) {  
-  .app-wrap {      
+@media (width > 768px) {
+  .app-wrap {
     padding: 2.5rem;
   }
+
   .app {
     border-radius: 1.25rem;
     max-width: 50svh;
@@ -329,12 +298,45 @@ svg {
 }
 
 @media (height < 500px) {
-  .app-wrap {      
+  .app-wrap {
     padding: 0;
   }
+
   .app {
     border-radius: 0;
     min-height: 350px;
     max-width: 100svw;
   }
+}
+
+
+
+//
+// OS Resets
+//
+
+#top_navigation {
+  display: none;
+}
+
+
+.material-symbols-outlined.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined'
+}
+
+#main,
+.cleanTheme .main-width.main-width,
+.wrap-container.wrap-container,
+.widgetContainer.widgetContainer,
+.welcomeMessageWidget.welcomeMessageWidget {
+  height: 100svh;
+}
+
+.cleanTheme .main-width.main-width {
+  max-width: 100svw;
+  padding: 0;
+}
+
+.cleanTheme .widgetContainer.widgetContainer {
+  margin-bottom: 0;
 }
