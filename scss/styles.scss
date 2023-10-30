@@ -49,16 +49,16 @@ $success: #7952b3;
 @import "bootstrap/scss/reboot";
 
 @import "bootstrap/scss/type";
-// @import "bootstrap/scss/images";
+@import "bootstrap/scss/images";
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/nav";
+@import "bootstrap/scss/nav";
 // @import "bootstrap/scss/navbar"; // Requires nav
 // @import "bootstrap/scss/card";
 // @import "bootstrap/scss/breadcrumb";
@@ -70,16 +70,16 @@ $success: #7952b3;
 // @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
 // @import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
-@import "bootstrap/scss/popover";
+// @import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas"; // Requires transitions
 // @import "bootstrap/scss/placeholders";
 
 // Helpers
-// @import "bootstrap/scss/helpers";
+@import "bootstrap/scss/helpers";
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
@@ -93,7 +93,16 @@ $success: #7952b3;
   display: none;
 }
 
-:root {
+[data-bs-theme=dark][data-bs-theme=dark] {
+  --bs-body-bg: #151515;
+}
+
+[data-bs-toggle="collapse"] {
+  // transition: transform 0.3s ease;
+}
+
+[data-bs-toggle="collapse"]:not(.collapsed) {
+  transform: rotate(180deg);
 }
 
 :where(html), 
@@ -108,18 +117,21 @@ $success: #7952b3;
 
 .app {
   background: #f9f9f9;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header"
-  "main";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
   overflow: hidden;
 }
 
 .app-header {
-  grid-area: header;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  z-index: 1;
 }
 
 .app-main {
-  grid-area: main;
+  grid-column: 1 / 1;
+  grid-row: 2 / 3;
+  z-index: 0;
 }
 
 .product {
@@ -143,8 +155,8 @@ $success: #7952b3;
 
 // offcanvas
 
-.offcanvas {
-  --bs-offcanvas-width: clamp(200px, 60%, 300px);
+.main-menu {
+  --bs-offcanvas-width: clamp(180px, 40%, 200px);
   width: var(--bs-offcanvas-width);
 }
 
