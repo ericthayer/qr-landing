@@ -83,7 +83,7 @@ svg {
 }
 
 .material-symbols-outlined {
-  transition: color 0.3s ease;
+  transition: color 0.15s ease;
 }
 
 .btn.btn {
@@ -117,7 +117,7 @@ svg {
   background-image: none;
   width: 48px;
 
-  >span {
+  > span {
     color: var(--bs-light);
   }
 
@@ -126,7 +126,7 @@ svg {
     background: var(--bs-body-bg);
     color: var(--bg-light);
 
-    >span {
+    > span {
       color: var(--bs-gray-100);
       // transition: color 0.3s ease;
     }
@@ -141,6 +141,15 @@ svg {
   --bs-btn-border-width: 1px;
   background: var(--bs-gray-200);
   border-color: var(--bs-gray-300);
+}
+
+.btn-outline-secondary {
+
+  color: var(--bs-gray-600);
+
+  & > .btn-label {
+    color: var(--bs-black);
+  }
 }
 
 // layout
@@ -228,6 +237,15 @@ svg {
   color: var(--bs-black);
 }
 
+.subtitle {
+  font-size: 0.75em;
+  max-width: 50ch;
+}
+
+.disclaimer {
+  font-size: 0.65rem;
+}
+
 // header
 
 .navbar-brand {
@@ -257,12 +275,14 @@ svg {
   }
 }
 
-.offcanvas.offcanvas {
-  // z-index: 1041;
-}
-
 .product-registration.offcanvas.offcanvas-bottom {
   --bs-offcanvas-height: 65vh;
+}
+
+.product-registration {
+  .offcanvas-header {
+    border-bottom: 1px solid var(--bs-gray-300);
+  }
 }
 
 [style*="hidden"]:not(.resizerFullScreen) .app-main {
@@ -280,7 +300,6 @@ svg {
 [data-bs-toggle="collapse"]:not(.collapsed) .icon {
   transform: rotate(180deg);
 }
-
 
 //  Media Queries
 

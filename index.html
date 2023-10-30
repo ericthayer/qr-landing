@@ -84,7 +84,7 @@
               class="product-description d-flex align-items-start justify-content-between flex-column flex-sm-row pt-4 px-4 pb-4"
             >
               <section class="mb-3 mb-sm-0 me-3">
-                <h2 class="product-title h6 mt-0 mb-1">
+                <h2 class="product-title h6 mt-0 mb-0 fw-bold">
                   BLACK+DECKER 14,000 BTU Portable Air Conditioner
                 </h2>
                 <small class="product-subtitle text-muted"
@@ -103,18 +103,20 @@
                 <span class="icon material-symbols-outlined fs-3">
                   expand_less
                 </span>
-                <small class="btn-label text-uppercase fw-bold">More</small>
+                <small class="btn-label text-uppercase">More</small>
               </button>
             </section>
             <section class="product-actions d-grid gap-2 px-4 pb-4">
               <section class="d-grid gap-2 col-12 mx-auto">
                 <button
-                  class="btn btn-dark border-0 shadow-none rounded-0 py-3"
+                  class="btn btn-dark border-0 shadow-none rounded-0 py-3 d-flex align-items-center justify-content-center"
                   type="button"
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasProductRegistration"
                 >
-                  Register Your Product
+                <span class="icon material-symbols-outlined me-2 d-none">create</span>
+
+                  <span class="btn-label">Register Your Product</span>
                 </button>
               </section>
               <section class="collapse" id="collapseProductActions">
@@ -132,14 +134,18 @@
                     class="btn btn-outline-secondary rounded-0 py-3 d-flex align-items-center justify-content-center"
                     type="button"
                   >
-                    <span class="icon material-symbols-outlined me-2">download</span>
+                    <span class="icon material-symbols-outlined me-2"
+                      >download</span
+                    >
                     <span class="btn-label">Download Our App</span>
                   </button>
                   <button
                     class="btn btn-outline-secondary rounded-0 py-3 d-flex align-items-center justify-content-center"
                     type="button"
                   >
-                    <span class="icon material-symbols-outlined me-2">chat</span>
+                    <span class="icon material-symbols-outlined me-2"
+                      >chat</span
+                    >
                     <span class="btn-label">Give Us Feedback</span>
                   </button>
                 </section>
@@ -278,12 +284,16 @@
         id="offcanvasProductRegistration"
         aria-labelledby="offcanvasProductRegistrationLabel"
       >
-        <section class="offcanvas-header">
+        <section class="offcanvas-header mb-2 align-items-start">
           <h2
-            class="offcanvas-title h5 d-flex flex-column gap-2"
+            class="offcanvas-title fs-6 mb-0 d-flex flex-column"
             id="offcanvasProductRegistrationLabel"
           >
-            Register Your Product
+            <span class="fw-bold">Register Your Product</span>
+            <small class="subtitle me-4 pe-4 text-muted">
+              Registering your product allows us to give you a tailored,
+              complimentary, direct service for your machine.
+            </small>
           </h2>
           <button
             type="button"
@@ -292,22 +302,43 @@
             aria-label="Close"
           ></button>
         </section>
-        <section class="offcanvas-body">
+        <section class="offcanvas-body d-flex flex-column justify-content-end">
           <section class="product-description">
-            <h3 class="h5 mb-2">
+            <h3 class="h5 mb-3 fw-bold">
               BLACK+DECKER 14,000 BTU Portable Air Conditioner
             </h3>
-            <section class="figure">
+            <section class="figure mb-3">
               <img
-                src="./media/img-BPACT08WT-01.jpg"
+                src="https://static.onsitesupport.io/public/blackanddecker/my-interface/img-BPACT08WT-01.jpg"
                 class="img-fluid"
                 alt="BLACK DECKER BPACT08WT 8000 BTU Portable Air Conditioner"
               />
-              <figcaption class="figure-caption">
-                BLACK+DECKER 14,000 BTU Portable Air Conditioner
-              </figcaption>
+              <!-- <figcaption class="figure-caption mt-2 pe-4 text-muted">
+                Registering your product allows us to give you a tailored,
+                complimentary, direct service for your machine.
+              </figcaption> -->
             </section>
           </section>
+          <form class="registration-form d-flex flex-column mb-2">
+            <section class="col-12 form-floating mb-3">
+              <input
+                type="email"
+                class="form-control rounded-0"
+                id="floatingInputGrid"
+                placeholder="name@example.com"
+                value=""
+              />
+              <label for="floatingInputGrid">Enter Email</label>
+            </section>
+            <button
+              class="btn btn-dark border-0 shadow-none rounded-0 py-3 d-flex align-items-center justify-content-center mb-3"
+              type="submit"
+            >
+              <span class="icon material-symbols-outlined me-2">email</span>
+              <span class="btn-label">Register with Email</span>
+            </button>
+            <p class="disclaimer mb-0 text-center w-75 mx-auto">By registering you agree to email communications from Onsite Support and agree with our Terms & Conditions. For help or questions <a href="https://onsitesupport.io/contact-us/" title="Contact us at onsitesupport.io">contact us</a></p>
+          </form>
         </section>
       </section>
     </section>
