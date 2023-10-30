@@ -12,6 +12,7 @@ $body-color: #333;
 $body-bg: #fff;
 $border-radius: .4rem;
 $success: #7952b3;
+$link-color: #117FEE;
 
 // Required
 @import "bootstrap/scss/variables";
@@ -208,8 +209,8 @@ svg {
   max-width: 32ch;
 }
 
-.product-actions .btn.btn {
-  --bs-btn-border-color: var(--bs-black) !important;
+.product-actions.product-actions .btn {
+  --bs-btn-border-color: var(--bs-black);
 
   &:hover,
   &:focus {
@@ -221,6 +222,10 @@ svg {
       color: var(--bs-white);
     }
   }
+}
+
+.product-link {
+  color: var(--bs-black);
 }
 
 // header
@@ -318,7 +323,6 @@ svg {
 #top_navigation {
   display: none;
 }
-
 
 .material-symbols-outlined.material-symbols-outlined {
   font-family: 'Material Symbols Outlined'
