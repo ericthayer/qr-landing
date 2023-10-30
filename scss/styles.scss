@@ -115,7 +115,6 @@ svg {
   max-width: 100%;
 }
 
-
 .material-symbols-outlined {
   transition: color 0.3s ease;
 }
@@ -134,7 +133,7 @@ svg {
 
 .btn-toggle.btn-toggle {
   background: var(--bs-gray-200);
-  width: 31px;
+  max-width: 31px;
 }
 
 .btn-main-menu.btn-main-menu {
