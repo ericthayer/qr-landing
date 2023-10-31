@@ -3,16 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A front-end landing page prototype created as an option for Onsite Support customers. This has a `mobile-only` approach that focuses on a specific product to—highlight features, information, or registration options. This package would not require the need to develop a responsive soulution for larger screens since the content has been streamlined to a few items, actions grouped, and the minimal UI allows you view the hero media."
+    />
+    <!-- <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+      as="style"
+    />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+    /> -->
+    <link rel="preload" href="css/styles.css" as="style" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Black and Decker QR landing page</title>
   </head>
@@ -32,13 +36,11 @@
           >
             <span class="visually-hidden">Black and Decker</span>
             <?xml version="1.0" encoding="UTF-8"?><svg
-              id="Layer_2"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="0 0 241.04 43.61"
             >
-              <defs></defs>
-              <g id="Layer_1-2">
+              <g>
                 <g>
                   <g>
                     <path
@@ -64,7 +66,9 @@
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasMainMenu"
         >
-          <span class="material-symbols-outlined"> Menu </span>
+          <span class="icon flex-fill">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+          </span>
         </button>
       </header>
       <section class="app-main d-flex flex-column">
@@ -98,12 +102,12 @@
                 data-bs-target="#collapseProductActions"
                 aria-expanded="false"
                 aria-controls="collapseProductActions"
-                aria-label="toggleProductInfo"
+                aria-label="View More Product Information"
               >
-                <span class="icon material-symbols-outlined fs-3">
-                  expand_less
+                <span class="icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m296-345-56-56 240-240 240 240-56 56-184-184-184 184Z"/></svg>
                 </span>
-                <small class="btn-label text-uppercase collapsed-closed pe-1"
+                <small class="btn-label text-uppercase collapsed-closed ps-1 pe-1"
                   >More</small
                 >
                 <!-- <small class="btn-label text-uppercase collapsed-open"
@@ -119,10 +123,6 @@
                   data-bs-toggle="offcanvas"
                   data-bs-target="#offcanvasProductRegistration"
                 >
-                  <span class="icon material-symbols-outlined me-2 d-none"
-                    >create</span
-                  >
-
                   <span class="btn-label">Register Your Product</span>
                 </button>
               </section>
@@ -132,27 +132,54 @@
                     class="btn btn-outline-secondary rounded-0 py-3 d-flex align-items-center justify-content-center"
                     type="button"
                   >
-                    <span class="icon material-symbols-outlined me-2"
-                      >picture_as_pdf</span
-                    >
+                    <span class="icon me-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 -960 960 960"
+                        width="24"
+                      >
+                        <path
+                          d="M360-460h40v-80h40q17 0 28.5-11.5T480-580v-40q0-17-11.5-28.5T440-660h-80v200Zm40-120v-40h40v40h-40Zm120 120h80q17 0 28.5-11.5T640-500v-120q0-17-11.5-28.5T600-660h-80v200Zm40-40v-120h40v120h-40Zm120 40h40v-80h40v-40h-40v-40h40v-40h-80v200ZM320-240q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"
+                        />
+                      </svg>
+                    </span>
                     <span class="btn-label">View User Manual</span>
                   </button>
                   <button
                     class="btn btn-outline-secondary rounded-0 py-3 d-flex align-items-center justify-content-center"
                     type="button"
                   >
-                    <span class="icon material-symbols-outlined me-2"
-                      >download</span
-                    >
+                    <span class="icon me-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 -960 960 960"
+                        width="24"
+                      >
+                        <path
+                          d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
+                        />
+                      </svg>
+                    </span>
                     <span class="btn-label">Download Our App</span>
                   </button>
                   <button
                     class="btn btn-outline-secondary rounded-0 py-3 d-flex align-items-center justify-content-center"
                     type="button"
                   >
-                    <span class="icon material-symbols-outlined me-2"
-                      >chat</span
-                    >
+                    <span class="icon me-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 -960 960 960"
+                        width="24"
+                      >
+                        <path
+                          d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"
+                        />
+                      </svg>
+                    </span>
                     <span class="btn-label">Give Us Feedback</span>
                   </button>
                 </section>
@@ -252,8 +279,8 @@
                   class="nav-link flex-fill d-flex align-items-center justify-content-between px-2"
                   href="#"
                 >
-                  <span class="material-symbols-outlined fs-6 me-2">
-                    shopping_cart
+                  <span class="icon fs-6 me-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg>
                   </span>
                   <span class="flex-fill"> My Cart </span>
                 </a>
@@ -263,9 +290,9 @@
                   class="nav-link flex-fill d-flex align-items-center justify-content-between px-2"
                   href="#"
                 >
-                  <span class="material-symbols-outlined fs-6 me-2">
-                    captive_portal
-                  </span>
+                <span class="icon fs-6 me-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M376-178q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm34-240h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Zm200 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm234 0h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640ZM480-80q-82 0-155-31.5t-127.5-86Q143-252 111.5-325T80-480q0-83 31.5-155.5t86-127Q252-817 325-848.5T480-880q83 0 155.5 31.5t127 86q54.5 54.5 86 127T880-480q0 10-.5 20t-1.5 20h-81q2-10 2.5-19.5t.5-20.5q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480v20.5q0 9.5-1 19.5h-80q1-10 1-19.5V-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400h134v80H404q12 44 31 83t45 75q11-16 21-32.5t19-33.5v146q-10 1-19.5 1.5T480-80Zm318-25L680-223v89h-80v-226h226v80h-90l118 118-56 57Z"/></svg>
+                </span>
                   <span class="flex-fill"> Visit Website </span>
                 </a>
               </li>
@@ -274,9 +301,9 @@
                   class="nav-link flex-fill d-flex align-items-center justify-content-between px-2"
                   href="#"
                 >
-                  <span class="material-symbols-outlined fs-6 me-2">
-                    login
-                  </span>
+                <span class="icon fs-6 me-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg>
+                </span>
                   <span class="flex-fill"> Sign In </span>
                 </a>
               </li>
@@ -309,24 +336,25 @@
             aria-label="Close"
           ></button>
         </section>
-        <section class="offcanvas-body d-flex flex-column justify-content-end">
+        <section class="offcanvas-body">
           <section class="product-description">
             <h3 class="h5 mb-3 fw-bold">
               BLACK+DECKER 14,000 BTU Portable Air Conditioner
             </h3>
-            <section class="figure mb-3">
+            <figure class="figure ratio ratio-16x9 mb-2">
               <img
-                src="https://static.onsitesupport.io/public/blackanddecker/my-interface/img-BPACT08WT-01.jpg"
+                src="./media/img-BPACT08WT-01.webp"
                 class="img-fluid"
                 alt="BLACK DECKER BPACT08WT 8000 BTU Portable Air Conditioner"
+                loading="lazy"
               />
-            </section>
+            </figure>
           </section>
           <form class="registration-form d-flex flex-column mb-2">
-            <section class="col-12 form-floating mb-3">
+            <section class="col-12 form-floating mb-2">
               <input
                 type="email"
-                class="form-control rounded-0"
+                class="form-control rounded-0 shadow-none border-2"
                 id="floatingInputGrid"
                 placeholder="name@example.com"
                 value=""
@@ -337,7 +365,9 @@
               class="btn btn-dark shadow-none rounded-0 py-3 d-flex align-items-center justify-content-center mb-3"
               type="submit"
             >
-              <span class="icon material-symbols-outlined me-2">email</span>
+              <span class="icon me-2">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+              </span>
               <span class="btn-label">Register with Email</span>
             </button>
             <p class="disclaimer mb-0 text-center mx-auto">
