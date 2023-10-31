@@ -83,7 +83,7 @@ svg {
 }
 
 .material-symbols-outlined {
-  transition: color 0.15s ease-in-out;
+  // transition: color 0.15s ease-in-out;
 }
 
 .btn.btn {
@@ -97,7 +97,7 @@ svg {
 .btn-dark.btn-dark {
   background-color: var(--bs-black);
   border-color: var(--bs-black);
-
+  
   &:hover,
   &:focus {
     background: var(--bs-light);
@@ -136,7 +136,6 @@ svg {
 
     > span {
       color: var(--bs-gray-100);
-      // transition: color 0.3s ease;
     }
   }
 }
@@ -239,6 +238,7 @@ svg {
 
     span {
       color: var(--bs-white);
+      transition: color .15s ease-in-out;
     }
   }
 }
@@ -262,7 +262,7 @@ svg {
 
   >img,
   svg {
-    height: 5svh;
+    height: 4svh;
     max-width: 13.5rem;
   }
 }
@@ -286,7 +286,7 @@ svg {
 }
 
 .product-registration.offcanvas.offcanvas-bottom {
-  --bs-offcanvas-height: 65vh;
+  --bs-offcanvas-height: 75vh;
 }
 
 .product-registration {
@@ -295,9 +295,15 @@ svg {
   }
 }
 
-[style*="hidden"]:not(.resizerFullScreen) .app-main {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
+[style*="hidden"]:not(.resizerFullScreen) {
+
+    
+  .product-info, .app-header, 
+  .product-media > img,
+  .product-media > iframe { 
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
 }
 
 [style*="hidden"]:not(.resizerFullScreen) #main {
@@ -327,11 +333,11 @@ svg {
 
 //  Media Queries
 
-// @media (width > 360px) {
-//   .main-menu {
-//     border-radius: 2.5rem 0 0 0;
-//   }
-// }
+@media (width > 480px) {
+  .disclaimer {
+    max-width: 85%;
+  }
+}
 
 @media (width > 700px) {
   .app-wrap {
