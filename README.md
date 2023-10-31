@@ -8,7 +8,7 @@
 
 A front-end landing page prototype created as an option for [Onsite Support](https://onsitesupport.io/) customers. This has a "mobile-only" approach that focuses on a specific product to—highlight features, information, or registration options. This package would not require the need to develop a responsive soulution for larger screens since the content has been streamlined to a few items, actions grouped, and the minimal UI allows you clearly view the hero media.
 
-## Performance Audits
+### Performance Audits
 
 <img src="media/with-autoplay-performance.png" width="350" alt="current Lighthouse performance audit scores" />
 
@@ -19,7 +19,8 @@ We are taking performance hits by using YouTube as our video source. Embedding v
 [Video Autoplay](https://qrlanding.netlify.app/](https://qrlanding.netlify.app/perf/autoplay)) • [No Autoplay](https://support.onsitesupport.io/](https://qrlanding.netlify.app/perf/no-autoplay)) • [Production](https://support.onsitesupport.io/](https://qrlanding.netlify.app/perf/current))
 
 
-## How to use
+#### Setup
+In your terminal, `run` the following to start this app locally.
 
 ```sh
 git clone https://github.com/ericthayer/qr-landing.git
@@ -27,21 +28,36 @@ cd qr-landing/
 npm install
 npm start
 ```
+server: `http://localhost:3000`
 
-## markup
+#### scripts 
+
+`package.json`
+
+```json
+"build": "npm run css",
+"css-compile": "sass --style compressed --source-map --embed-sources --no-error-css --load-path=node_modules scss/:css/",
+"css-lint": "stylelint scss/",
+"css-prefix": "postcss --replace css/styles.css --use autoprefixer --map",
+"css": "npm-run-all css-compile css-prefix",
+"server": "sirv --dev --no-clear --port 3000",
+"start": "npm-run-all --parallel watch server",
+"watch": "nodemon -e html,scss -x \"npm run css\"",
+"test": "npm-run-all css-lint css"
+```
+
+#### markup
 
 `index.html`
 
-## styles
+#### styles
 
 `scss/styles.scss`
 
-### run to compile css
+#### things to improve
 
-```sh
-npm build
-```
-
-### result
-
-`css/styles.css`
+- performance issues with video
+- local build DOES NOT live-reload browser
+- OS platorm editor only accepts pasted code on intial submission
+- serve .webp format
+- host base stylesheet
