@@ -11,9 +11,12 @@ A front-end landing page prototype created as an option for [Onsite Support](htt
 ## Performance Audits
 
 <img src="media/with-autoplay-performance.png" width="350" alt="current Lighthouse performance audit scores" />
+
 We are taking performance hits by using YouTube as our video source. Embedding video without third-party bloat is ideal. Either way, we should create a [`facade`](https://developer.chrome.com/docs/lighthouse/performance/third-party-facades/) to help limit the amount of code needed for first paint. We see some gains when we add `loading=lazy` & remove `autoplay`.
 
-[Video Autoplay](https://qrlanding.netlify.app/](https://qrlanding.netlify.app/perf/autoplay)) | [No Autoplay](https://support.onsitesupport.io/](https://qrlanding.netlify.app/perf/no-autoplay))
+#### REPORTS
+
+[Video Autoplay](https://qrlanding.netlify.app/](https://qrlanding.netlify.app/perf/autoplay)) • [No Autoplay](https://support.onsitesupport.io/](https://qrlanding.netlify.app/perf/no-autoplay)) • [Production](https://support.onsitesupport.io/](https://qrlanding.netlify.app/perf/current))
 
 
 ## How to use
