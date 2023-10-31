@@ -307,8 +307,22 @@ svg {
 
 // Collapse
 
-[data-bs-toggle="collapse"]:not(.collapsed) .icon {
-  transform: rotate(180deg);
+.collapsed-open {
+  display: none;
+}
+
+[data-bs-toggle="collapse"]:not(.collapsed) {
+  .icon {
+    transform: rotate(180deg);
+  }
+
+  .collapsed-closed {
+    display: none;
+  }
+
+  .collapsed-open {
+    display: block;
+  }
 }
 
 //  Media Queries
