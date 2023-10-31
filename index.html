@@ -7,15 +7,6 @@
       name="description"
       content="A front-end landing page prototype created as an option for Onsite Support customers. This has a `mobile-only` approach that focuses on a specific product to—highlight features, information, or registration options. This package would not require the need to develop a responsive soulution for larger screens since the content has been streamlined to a few items, actions grouped, and the minimal UI allows you view the hero media."
     />
-    <!-- <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-      as="style"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
-    /> -->
     <link rel="preload" href="css/styles.css" as="style" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Black and Decker QR landing page</title>
@@ -65,10 +56,12 @@
           class="btn btn-text btn-main-menu d-flex align-items-center rounded-0 shadow-none"
           data-bs-toggle="offcanvas"
           data-bs-target="#offcanvasMainMenu"
+          aria-label="Toggle Main Menu"
         >
           <span class="icon flex-fill">
             <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
           </span>
+          <span class="visually-hidden">Main Menu</span>
         </button>
       </header>
       <section class="app-main d-flex flex-column">
@@ -78,7 +71,6 @@
               src="https://www.youtube.com/embed/videoseries?si=rm5h3tF16wYAt3Ry&amp;autoplay=1&amp;mute=1&amp;loop=1&amp;controls=0&amp;list=PLuSjV5YETTq2f_p77xTg4U87auqO7mExM"
               title="YouTube video player"
               frameborder="0"
-              loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
@@ -97,17 +89,17 @@
               </section>
               <button
                 class="btn btn-outline-secondary btn-toggle d-flex align-items-center rounded-1 py-1 ps-1 pe-1 collapsed shadow-none"
-                type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#collapseProductActions"
                 aria-expanded="false"
                 aria-controls="collapseProductActions"
                 aria-label="View More Product Information"
+                type="button"
               >
                 <span class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m296-345-56-56 240-240 240 240-56 56-184-184-184 184Z"/></svg>
                 </span>
-                <small class="btn-label text-uppercase collapsed-closed ps-1 pe-1"
+                <small class="btn-label text-uppercase text-dark collapsed-closed ps-1 pe-1"
                   >More</small
                 >
                 <!-- <small class="btn-label text-uppercase collapsed-open"
@@ -355,11 +347,11 @@
               <input
                 type="email"
                 class="form-control rounded-0 shadow-none border-2"
-                id="floatingInputGrid"
+                id="registrationEmail"
                 placeholder="name@example.com"
                 value=""
               />
-              <label for="floatingInputGrid">Enter Email</label>
+              <label for="registrationEmail">Enter Email</label>
             </section>
             <button
               class="btn btn-dark shadow-none rounded-0 py-3 d-flex align-items-center justify-content-center mb-3"
@@ -372,13 +364,12 @@
             </button>
             <p class="disclaimer mb-0 text-center mx-auto">
               By registering you agree to email communications from Onsite
-              Support and agree with our Terms & Conditions. For help or
-              questions
+              Support and agree with our <a href="https://www.threecolts.com/legal/terms-of-use-agreement">Terms of Service</a>. Please
               <a
                 href="https://onsitesupport.io/contact-us/"
                 title="Contact us at onsitesupport.io"
                 >contact us</a
-              >
+              > if you need help.
             </p>
           </form>
         </section>
