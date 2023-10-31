@@ -2,9 +2,9 @@
 
 Front-end landing page concept created with [`Bootstrap 5.3`](https://getbootstrap.com/docs/5.3/getting-started/introduction/) for Onsite Support demo purposes.
 
-[Live Demo](https://qrlanding.netlify.app/)
-
 [![QR Landing Template](media/qr-landing-demo-04.png)](https://qrlanding.netlify.app/)
+
+[Live Demo](https://qrlanding.netlify.app/)
 
 ## markup 
 
