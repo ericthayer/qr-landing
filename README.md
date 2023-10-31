@@ -1,8 +1,19 @@
-# Onsite Support QR Landing
+# Onsite Support QR Landing Template
 
-Front-end template created with [`Bootstrap 5.3`](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+Front-end landing page concept created with [`Bootstrap 5.3`](https://getbootstrap.com/docs/5.3/getting-started/introduction/) for Onsite Support demo purposes.
 
-<!-- [![Bootstrap 5.3]()](https://getbootstrap.com/docs/5.3/getting-started/introduction/) -->
+[Live Demo](https://qrlanding.netlify.app/)
+
+[![QR Landing Template](media/qr-landing-demo-04.png)](https://qrlanding.netlify.app/)
+
+## markup 
+
+`index.html`
+
+## css 
+
+`scss/styles.scss`
+
 
 ## How to use
 
