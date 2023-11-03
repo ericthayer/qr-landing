@@ -16,7 +16,7 @@ We are taking performance hits by using YouTube as our video source. Embedding v
 
 #### REPORTS
 
-[Video Autoplay](https://qrlanding.netlify.app/](https://qrlanding.netlify.app/perf/autoplay)) • [No Autoplay](https://support.onsitesupport.io/](https://qrlanding.netlify.app/perf/no-autoplay)) • [Production](https://support.onsitesupport.io/](https://qrlanding.netlify.app/perf/current))
+[Autoplay Enabled](https://qrlanding.netlify.app/](https://qrlanding.netlify.app/perf/autoplay)) • [Autoplay Disabled](https://support.onsitesupport.io/](https://qrlanding.netlify.app/perf/no-autoplay)) • [Production](https://support.onsitesupport.io/](https://qrlanding.netlify.app/perf/current))
 
 
 #### Setup
