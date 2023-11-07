@@ -241,6 +241,10 @@ svg {
 
 .disclaimer {
   font-size: 0.75rem;
+
+  & > a {
+    font-size: inherit;
+  }
 }
 
 // header
